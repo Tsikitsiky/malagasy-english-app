@@ -14,14 +14,14 @@ function Edit() {
 }
 storiesOf('PhraseTextarea', module)
   .addDecorator(story => <View>{story()}</View>)
-  .add('an editable input', () => <Edit />)
+  .add('editable input', () => <Edit />)
   .add('not editable phrase', () => (
     <PhraseTextarea phrase={'a word word'} editable={false} />
   ))
-  .add('longer not editable', () => (
+  .add('not editable and longer', () => (
     <PhraseTextarea
       phrase={
-        'a word worf word o a word worf wo a word worf word o a word worf wo a word worf word o a word worf wo'
+        'Longer phrase Longer phrase Longer phrase Longer phrase Longer phrase'
       }
       editable={false}
     />
