@@ -19,6 +19,8 @@ const styles = StyleSheet.create({
     color: '#111827',
     maxWidth: 360,
     marginHorizontal: 'auto',
+    fontSize: 20,
+    lineHeight: 24.3,
   },
 });
 export default function PhraseTextarea({
