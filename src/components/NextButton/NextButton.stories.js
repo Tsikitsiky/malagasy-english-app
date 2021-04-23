@@ -4,21 +4,18 @@ import {View} from 'react-native';
 import {storiesOf} from '@storybook/react-native';
 
 import NextButton from './NextButton';
-import {action} from '@storybook/addon-actions';
-import {Text} from 'react-native';
+
+function Click(params) {
+  console.log('You clicked', params);
+}
 
 storiesOf('NextButton', module)
   .addDecorator(story => <View>{story()}</View>)
-  .add('add', () => (
-    <NextButton onPress={() => action('add click')}>
-      <Text>Add</Text>
-    </NextButton>
+  .add('add', () => <NextButton onPress={() => Click('Add')} text="Add" />)
+  .add('add disabled', () => (
+    <NextButton onPress={() => Click()} text="Add" disabled={true} />
   ))
-  .add('next', () => (
-    <NextButton onPress={() => action('add click')}>
-      <Text>Next</Text>
-    </NextButton>
-  ));
+  .add('next', () => <NextButton onPress={() => Click('Next')} text="Next" />);
 //   .add('longest', () => (
 //     <NextButton ext="Add" onPress={() => action('add click')} />
 //   ));
