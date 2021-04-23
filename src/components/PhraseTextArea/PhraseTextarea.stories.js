@@ -13,7 +13,7 @@ function Edit() {
   );
 }
 storiesOf('PhraseTextarea', module)
-  .addDecorator(story => <View>{story()}</View>)
+  .addDecorator(story => <View style={{padding: 23}}>{story()}</View>)
   .add('editable input', () => <Edit />)
   .add('not editable phrase', () => (
     <PhraseTextarea phrase={'a word word'} editable={false} />
