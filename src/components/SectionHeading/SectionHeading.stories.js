@@ -7,9 +7,27 @@ import SectionHeading from './SectionHeading';
 
 storiesOf('SectionHeading', module)
   .addDecorator(story => <View>{story()}</View>)
-  .add('select a category', () => (
-    <SectionHeading
-      text="
+  .add('headings', () => (
+    <>
+      <SectionHeading
+        text="
   Select a category"
-    />
+      />
+      <SectionHeading
+        text="
+  Seen phrases"
+      />
+      <SectionHeading
+        text="
+  Learnt phrases"
+      />
+      <SectionHeading
+        text="
+  The phrase"
+      />
+      <SectionHeading
+        text="
+    Pick a solution"
+      />
+    </>
   ));
