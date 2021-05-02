@@ -15,7 +15,10 @@ export const getAllCategoriesIds = () => {
 };
 
 export const getPhraseIdsForCategory = catId => {
-  return categoriesData.categories.find(cat => cat.id === catId).phrasesIds;
+  const phraseIdForCategory = categoriesData.categories.find(
+    cat => cat.id === catId,
+  ).phrasesIds;
+  return (phraseIdForCategory && phraseIdForCategory) || null;
 };
 
 export const getAllPhrases = () => {

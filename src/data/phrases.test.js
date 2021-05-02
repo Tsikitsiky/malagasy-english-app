@@ -5,7 +5,7 @@ import {
   findCategoryById,
   getAllCategoriesIds,
   LANGUAGE_NAMES,
-} from './dataUtils';
+} from './DataUtils';
 
 describe('getAllCategoriesNames', () => {
   it('get all names for category for given language ', () => {
